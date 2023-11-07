@@ -11,7 +11,7 @@ pipeline {
   stage('Build PythonCode') {
       steps {
         script {
-          echo 'Stage 2'
+          sh python test.py
         }
       }
     }
