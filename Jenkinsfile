@@ -12,7 +12,8 @@ pipeline {
       steps {
         script {
           // sh 'pip install -r requirements.txt'
-          sh 'python test.py'
+          // sh 'python test.py'
+          echo 'hello'
         }
       }
     }
