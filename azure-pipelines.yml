@@ -7,13 +7,15 @@ pool:
 steps:
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '3.x' # Specify the Python version you want to use
+    versionSpec: '3.x'
     addToPath: true
 
 - script: |
-    # Install dependencies using pip
     pip install -r requirements.txt
-
-    # Run any build scripts or commands here
     python test.py build
   displayName: 'Build Python Project'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    artifact: 'my_artifact'
