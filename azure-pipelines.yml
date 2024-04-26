@@ -8,4 +8,4 @@ steps:
 - task: PythonScript@0
   inputs:
     scriptSource: 'inline'
-    script: 'python build .'
+    script: 'build .'
