@@ -1,1 +1,1 @@
-print "  hello python this side  "
+print "hello python this side"
